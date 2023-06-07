@@ -1,0 +1,47 @@
+{
+  "name": "ahk",
+  "version": "0.1.0",
+  "description": "AutoHotkey ffi bindings for NodeJs",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "build:dev": "tsc --sourceMap",
+    "clean": "rimraf dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "powershell -ExecutionPolicy Bypass -File ./install.ps1"
+  },
+  "os": [
+    "win32"
+  ],
+  "engineStrict": true,
+  "engines": {
+    "node": ">= 16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ashnel3/node-ahk.git"
+  },
+  "keywords": [
+    "ahk",
+    "autohotkey"
+  ],
+  "author": "ashnel3",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ashnel3/node-ahk/issues"
+  },
+  "homepage": "https://github.com/ashnel3/node-ahk#readme",
+  "dependencies": {
+    "ffi-napi": "^4.0.3",
+    "ref-napi": "^3.0.3",
+    "ref-wchar-napi": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/ffi-napi": "^4.0.7",
+    "@types/node": "^20.2.5",
+    "@types/ref-napi": "^3.0.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
+  }
+}

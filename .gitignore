@@ -1,3 +1,11 @@
+docs
+lib
+*.dll
+
+# Editor files
+.vs*
+.idea
+
 # Logs
 logs
 *.log
