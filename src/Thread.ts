@@ -1,4 +1,4 @@
-import { Ahk } from "./Ahk.js";
+import type { Ahk } from "./Ahk.js";
 
 /**
  * AutoHotkey thread class
@@ -33,7 +33,7 @@ export class AhkThread {
     this.ahk._lib.ahkAssign(name, value, this.id)
   }
 
-  msgbox(msg: string, title = '', options = ''): void {
-    this.ahk._lib.ahkFunction('MsgBox', msg, title, options, '', '', '', '', '', '', '', this.id)
+  msgbox(msg: string, title = '', options = ''): string {
+    return this.ahk._lib.ahkFunction('MsgBox', msg, title, options, '', '', '', '', '', '', '', this.id)
   }
 }
